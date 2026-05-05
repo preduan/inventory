@@ -39,6 +39,14 @@ $(document).ready(function() {
     let itemCount = 0;
     const openItems = {}; // Track which items are open
     
+    // Define the display area bounds (right side of screen)
+    const displayArea = {
+        top: 100,
+        left: window.innerWidth * 0.55, // Start at 55% from left
+        width: window.innerWidth * 0.4,   // 40% of viewport width
+        height: window.innerHeight * 0.8  // 80% of viewport height
+    };
+    
     $('.item').on('click', function() {
         const imageSrc = $(this).data('image');
         const itemName = $(this).text();
@@ -58,9 +66,9 @@ $(document).ready(function() {
                 // Create draggable item element (no close button)
                 const $draggableItem = $('<div class="draggable-item" id="' + itemId + '"><img src="' + imageSrc + '" alt="' + itemName + '"></div>');
                 
-                // Random initial position
-                const randomTop = Math.random() * 200 + 100;
-                const randomLeft = Math.random() * 300 + 400;
+                // Randomize position within the defined display area
+                const randomTop = displayArea.top + Math.random() * (displayArea.height - 150);
+                const randomLeft = displayArea.left + Math.random() * (displayArea.width - 200);
                 
                 $draggableItem.css({
                     'position': 'fixed',
