@@ -8,36 +8,136 @@
     <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <!-- Styles -->
-    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <!-- VT323 Font -->
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <script src="script.js"></script>
 </head>
 <body>
-    <nav class="navbar-custom navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="/"><span class="mb-0 h2">Project Name</span></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="/"><span class="mb-0 h5">Home</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="mb-0 h5">Section</span></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
+    <div id="time-display"></div>
+    <header class="home">hi, come snoop!</header>
     <div class="container">
-        <br>
-        {% block content %}
-        {% endblock %}
-    </div>
 
-    <!-- Scripts -->
-    <script src="{{url_for('static', filename='script.js')}}"></script>
+        <!--<a href="inside.html">
+            <img class ="fridge" id="fridge-image" src="/icons/fridge1.png" alt="Fridge">
+        </a>-->
+        
+        <details>
+            <summary> 01 about</summary>
+            <ul>
+                <p> Welcome to the inside of my home!</p>
+
+            </ul>
+        </details>
+
+        <details>
+            <summary> 02 inventory</summary>
+            <ul>
+                <details>
+                    <summary> fridge</summary>
+                    <ul>
+                        <details>
+                            <summary> fresh items</summary>
+                            <ul>
+                                <p>• <span class="item" data-image="groceries/beeflessbulgogi.png">beefless bulgogi</span></p>
+                                <p>• <span class="item" data-image="groceries/turkey.png">turkey slices</span></p>
+                                <p>• <span class="item" data-image="groceries/chive_creamcheese.png">garlic cream cheese spread</span></p>
+                                <p>• tofu</p>
+                                <p>• eggs</p>
+                                <p>• sourdough bread</p>
+                            </ul>
+                        </details>
+                        <details>
+                            <summary> beverages</summary>
+                            <ul>
+                                <p>• <span class="item" data-image="groceries/mangonectar.png">mango nectar</span></p>
+                                <p>• oat milk</p>
+                            </ul>
+                        </details>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary> pantry</summary>
+                    <ul>
+                        <details>
+                            <summary> grains & pasta</summary>
+                            <ul>
+                                <p>• medium-grain rice</p>
+                                <p>• pasta</p>
+                                <p>• noodles</p>
+                                <p>• <span class="item" data-image="groceries/chiaseeds.png">chia seeds</span></p>
+                
+                            </ul>
+                        </details>
+                        <details>
+                            <summary> spices & condiments</summary>
+                            <ul>
+                                <p>• salt</p>
+                                <p>• <span class="item" data-image="groceries/soysauce.png">superior soy sauce</span></p>
+                                <p>• olive oil</p>
+                                <p>• superior pickle sauce</p>
+
+                            </ul>
+                        </details>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary> freezer</summary>
+                    <ul>
+                        <details>
+                            <summary> frozen meals</summary>
+                            <ul>
+                                <p>• Frozen mangoes</p>
+                                <p>• Ice cream</p>
+                                <p>• Frozen curry</p>
+                            </ul>
+                        </details>
+                    </ul>
+                </details>
+                <details>
+                    <summary> bedroom</summary>
+                    <ul>
+                        <details>
+                            <summary>desk</summary>
+                            <ul>
+                                <p>• monitor </p>
+                                <p>• ikea pegboard </p>
+                                <p>• laptop stand</p>
+                                <p>• bluetooth keyboard</p>
+                            </ul>
+                        </details>
+                         <details>
+                            <summary> tall shelf</summary>
+                            <ul>
+                                <p>• bookbinding materials</p>
+                                <p>• archive box</p>
+                                <p>• zines </p>
+                                <p>• cameras </p>
+                            </ul>
+                        </details>
+                         <details>
+                            <summary>mini-desk</summary>
+                            <ul>
+                                <p>• incense </p>
+                                <p>• desk organizer</p>
+                                <p>• ikea lamp</p>
+                            </ul>
+                        </details>
+                    </ul>
+                </details>
+            </ul>
+        </details>
+
+        <details>
+            <summary> 03 sources</summary>
+            <ul>
+                <p>• Food Universe</p>
+                <p>• The Fruit Stand</p>
+                <p>• Trader Joes</p>
+            </ul
+        </details>
+    </div>
 </body>
 </html>

@@ -1,0 +1,136 @@
+body {
+    background-color: #6DBDF3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    font-family: VT323, monospace;
+    color: rgb(23, 23, 23);
+    margin-left: 15vw;
+    margin-right: 50vw;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    font-size: 20pt;
+}
+
+header.home {
+    font-size: 32pt;
+    font-family: VT323, monospace;
+    color: rgb(23, 23, 23);
+    margin-bottom: 24px;
+    margin-top: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.container {
+    text-align: left;
+    width: 100%;
+}
+
+.fridge {
+    max-width: 400px;
+    height: auto;
+}
+
+#fridge-inside {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.groceries{
+    max-width: 150px;
+    height: auto;
+}
+
+#time-display {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(23, 23, 23);
+}
+
+/* Details/Summary styling from aceschen.com */
+details {
+    margin-top: 6px;
+    text-align: left;
+    font-family: VT323, monospace;
+    color: rgb(23, 23, 23);
+}
+
+details > summary::before {
+    content: "+";
+    margin-right: 1ch;
+}
+
+details[open] > summary::before {
+    content: "—";
+    margin-right: 1ch;
+}
+
+summary {
+    cursor: pointer;
+    display: flex;
+    font-family: VT323, monospace;
+    font-size: 30pt;
+    color: rgb(23, 23, 23);
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+ul {
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+
+p {
+    font-size: 25pt;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+
+.item {
+    cursor: pointer;
+    color: rgb(21, 171, 49);
+    text-decoration: underline;
+}
+
+.item:hover {
+    background-color: rgb(21, 171, 49);
+    color: rgb(255, 255, 255);
+}
+
+#item-display {
+    position: fixed;
+    right: 10vw;
+    top: 50%;
+    transform: translateY(-50%);
+    max-width: 300px;
+    max-height: 400px;
+}
+
+#item-display img {
+    width: 100%;
+    height: auto;
+}
+
+.draggable-item {
+    cursor: move;
+    max-width: 200px;
+    user-select: none;
+}
+
+.draggable-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
